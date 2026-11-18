@@ -1,6 +1,6 @@
-enum class Direction : byte {
-    CLOCKWISE  = 0,  // Marche avant
-    COUNTER_CLOCKWISE = 1   // Marche arrière
+enum class MotorDirection : byte {
+    CLOCKWISE  = 0,         // Forward movement
+    COUNTER_CLOCKWISE = 1   // Backward movement
 };
 
 class Motor {
@@ -20,7 +20,7 @@ class Motor {
             digitalWrite(dirPin, LOW);
         }
 
-        void drive(byte speed, Direction dir) {
+        void drive(byte speed, MotorDirection dir) {
             digitalWrite(dirPin, static_cast<byte>(dir));
             analogWrite(pwmPin, speed);
         }

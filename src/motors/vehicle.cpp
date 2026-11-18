@@ -15,27 +15,27 @@ class Vehicle {
         }
 
         forward(byte speed) {
-            leftMotor.drive(Direction::CLOCKWISE, speed); // Set motor A to CCW at ma
-            rightMotor.drive(Direction::CLOCKWISE, speed);
+            leftMotor.drive(MotorDirection::CLOCKWISE, speed);
+            rightMotor.drive(MotorDirection::CLOCKWISE, speed);
         }
 
         backward(byte speed) {
-            leftMotor.drive(Direction::COUNTER_CLOCKWISE, speed); // Set motor A to CCW at ma
-            rightMotor.drive(Direction::COUNTER_CLOCKWISE, speed);
+            leftMotor.drive(MotorDirection::COUNTER_CLOCKWISE, speed);
+            rightMotor.drive(MotorDirection::COUNTER_CLOCKWISE, speed);
         }
 
         left() {
-            leftMotor.drive(Direction::COUNTER_CLOCKWISE, 90);
-            rightMotor.drive(Direction::CLOCKWISE, 90);
+            leftMotor.drive(MotorDirection::COUNTER_CLOCKWISE, 90);
+            rightMotor.drive(MotorDirection::CLOCKWISE, 90);
         }
 
         right() {
-            leftMotor.drive(Direction::CLOCKWISE, 90);
-            rightMotor.drive(Direction::COUNTER_CLOCKWISE, 90);
+            leftMotor.drive(MotorDirection::CLOCKWISE, 90);
+            rightMotor.drive(MotorDirection::COUNTER_CLOCKWISE, 90);
         }
 
         stop() {
-            leftMotor.drive(Direction::CLOCKWISE, 0);
-            rightMotor.drive(Direction::CLOCKWISE, 0);
+            leftMotor.drive(MotorDirection::CLOCKWISE, 0);
+            rightMotor.drive(MotorDirection::CLOCKWISE, 0);
         }
 };
